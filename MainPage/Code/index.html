@@ -17,7 +17,7 @@
             <div class="menu">
                 <ul class="left-menu">
                     <li>
-                        <button><a href="#">Ưu đãi</a></button>
+                        <a href="#" class="menu-link">Ưu đãi</a>
                         <div class="uu-dai-menu">
                             <div class="uu-dai-1 uu-dai">
                                 <h3>Mới & Nổi bật</h3>
@@ -73,20 +73,20 @@
                         </div>
                     </li>
                     <li>
-                        <button><a href="#">AI</a></button>
+                        <a href="#" class="menu-link">AI</a>
                         <div class="AI-menu">
-                                <ul>
-                                    <li><a href="">AI for all</a></li>
-                                    <li><a href="">Galaxy AI</a></li>
-                                    <li><a href="">Samsung AI TV</a></li>
-                                    <li><a href="">Bespoke AI</a></li>
-                                    <li><a href="">Galaxy AI Town</a></li>
-                                    <li><a href="">All AI Products</a></li>
-                                </ul>
+                            <ul>
+                                <li><a href="">AI for all</a></li>
+                                <li><a href="">Galaxy AI</a></li>
+                                <li><a href="">Samsung AI TV</a></li>
+                                <li><a href="">Bespoke AI</a></li>
+                                <li><a href="">Galaxy AI Town</a></li>
+                                <li><a href="">All AI Products</a></li>
+                            </ul>
                         </div>
                     </li>
                     <li>
-                        <button><a href="#">Di động</a></button>
+                        <a href="#" class="menu-link">Di động</a>
                         <div class="di-dong-menu">
                             <div class="list">
                                 <ul>
@@ -149,7 +149,7 @@
                         </div>
                     </li>
                     <li>
-                        <button><a href="#">TV&AV</a></button>
+                        <a href="#" class="menu-link">TV&AV</a>
                         <div class="tv">
                             <div>
                                 <h3>Được đề xuất</h3>
@@ -237,7 +237,7 @@
                         </div>
                     </li>
                     <li>
-                        <button><a href="#">Gia dụng</a></button>
+                        <a href="#" class="menu-link">Gia dụng</a>
                         <div class="gia-dung">
                             <div>
                                 <h3>Được đề xuất</h3>
@@ -323,7 +323,7 @@
                         </div>
                     </li>
                     <li>
-                        <button><a href="#">Máy tính</a></button>
+                        <a href="#" class="menu-link">Máy tính</a>
                         <div class="may-tinh">
                             <div>
                                 <h3>Được đề xuất</h3>
@@ -365,7 +365,7 @@
                         </div>
                     </li>
                     <li>
-                        <button><a href="#">Màn hình hiển thị</a></button>
+                        <a href="#" class="menu-link">Màn hình hiển thị</a>
                         <div class="man-hinh">
                             <div>
                                 <h3>Màn hình</h3>
@@ -393,15 +393,15 @@
                         </div>
                     </li>
                     <li>
-                        <button><a href="#">Phụ kiện</a></button>
+                        <a href="#" class="menu-link">Phụ kiện</a>
                     </li>
                     <li>
-                        <button><a href="#">SmartThing</a></button>
+                        <a href="#" class="menu-link">SmartThing</a>
                     </li>
                 </ul>
                 <ul class="right-menu">
                     <li>
-                        <button><a href="#">Hỗ trợ</a></button>
+                        <a href="#" class="menu-link">Hỗ trợ</a>
                         <div class="ho-tro">
                             <div>
                                 <h3>Hỗ Trợ Sản Phẩm</h3>
@@ -443,37 +443,271 @@
                         </div>
                     </li>
                     <li>
-                        <button><a href="#">Doanh nghiệp</a></button>
+                        <a href="#" class="menu-link">Doanh nghiệp</a>
                     </li>
                 </ul>
             </div>
             <div class="utility">
-                    <div>
-                        <a href="">
-                            <img src="icons8-search-50.png" alt="">
-                        </a>
+                <div>
+                    <a href="javascript:void(0)" onclick="chooseTopic(event)">
+                        <img src="icons8-search-50.png" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="javascript:void(0)" onclick="chooseTopic(event)">
+                        <img src="icons8-buy-50.png" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="javascript:void(0)" onclick="chooseTopic(event)">
+                        <img src="icons8-human-50.png" alt="">
+                    </a>
+                </div>
+                <div class="open-sidebar">
+                    <a href="javascript:void(0)" onclick="showSidebar(event)">
+                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"/></svg>
+                    </a>
+                </div>
+
+                <nav>
+                    <div class="search-close">
+                        <div onclick=back() class="back">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#5f6368"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+                        </div>
+                        <div class="search">
+                            <input type="text" name="" id="">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="35px" height="35px"><path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"/></svg>
+                            </span>
+                        </div>
+                        <div onclick=hideSidebar() class="close">
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/></svg>
+                        </div>
                     </div>
-                    <div>
-                        <a href="">
-                            <img src="icons8-buy-50.png" alt="">
-                        </a>
+                    <div class="infor">
+                        <div class="sign-in">
+                            <h3>
+                                <a href="">Đăng nhập/Sign-up</a>
+                            </h3>
+                            <p>
+                                <a href="">Vì sao nên tạo Samsung Account?</a>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+                                </span>
+                            </p>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)" onclick=chooseTopic(event)>
+                                    <span>Ưu đãi</span>
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></span>
+                                </a>
+                                
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Di động</span>
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>TV & AV</span>
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Gia Dụng</span>
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Máy Tính</span>
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Màn hình hiển thị</span>
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Phụ kiện</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>SmartThings</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span>Hỗ trợ</span>
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Doanh Nghiệp</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span>Trang của tôi</span>
+                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Đơn hàng</span>
+                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Đăng ký sản phẩm</span>
+                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Samsung Members</span>
+                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Samsung Rewards</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div>
-                        <a href="">
-                            <img src="icons8-human-50.png" alt="">
-                        </a>
+                    <div class="topic-inside">
+                        <h4>Ưu đãi</h4>
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)" onclick=down(event)>Mới và nổi bật
+                                    <span class="icon-up-down"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
+                                </a>
+                                <ul>
+                                    <li><a href="">Độc quyền Samsung.com</a></li>
+                                    <li><a href="">Samsung Shop App</a></li>
+                                    <li><a href="">SmartThings</a></li>
+                                    <li><a href="">Mega Sales</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Deal hot
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
+                                </a>
+                                <ul>
+                                    <li><a href="">Độc quyền Samsung.com</a></li>
+                                    <li><a href="">Samsung Shop App</a></li>
+                                    <li><a href="">SmartThings</a></li>
+                                    <li><a href="">Mega Sales</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Lợi thế chính hãng Samsung
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
+                                </a>
+                                <ul>
+                                    <li><a href="#">Galaxy S24 Series Offer</a></li>
+                                    <li><a href="#">Tất cả ưu đãi</a></li>
+                                    <li><a href="#">Ưu đãi sinh viên</a></li>
+                                    <li><a href="#">Ưu đãi chính phủ</a></li>
+                                    <li><a href="#">Ưu đãi Nhân viên Đối tác</a></li>
+                                    <li><a href="#">Deal Điện thoại</a></li>
+                                    <li><a href="#">Deal Điện tử - Điện lạnh</a></li>
+                                    <li><a href="#">Samsung Live</a></li>
+                                    <li><a href="#">Ưu đãi Z Flip5 | Z Fold5</a></li>
+                                    <li><a href="#">SamsungxYou</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Samsung Experimence Store
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
+                                </a>
+                                <ul>
+                                    <li><a href="#">Khám phá lợi thế</a></li>
+                                    <li><a href="#">VIP Mall</a></li>
+                                    <li><a href="#">Thu cũ đổi mới</a></li>
+                                    <li><a href="#">Samsung Care+</a></li>
+                                    <li><a href="#">Samsung Rewards</a></li>
+                                    <li><a href="#">Trả góp 0%</a></li>
+                                    <li><a href="#">Miễn phí giao hàng</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Đơn hàng của bạn
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
+                                </a>
+                                <ul>
+                                    <li><a href="">Tình trạng đơn hàng</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
-                    <div>
-                        <a href="">
-                            <img src="icons8-menu-50.png" alt="">
-                        </a>
-                    </div>
+                </nav>
+                <script>
+                    function showSidebar(event){
+                        event.preventDefault(); // Ngăn chặn hành vi mặc định
+                        const sidebar = document.querySelector('#header>.utility>nav');
+                        sidebar.style.display = 'flex'; 
+                    }
+                    function hideSidebar(event){
+                        const sidebar = document.querySelector('#header>.utility>nav');
+                        sidebar.style.display = 'none'; 
+                    }
+                    function chooseTopic(event){
+                        event.preventDefault(); // Ngăn chặn hành vi mặc định
+                        const infor = document.querySelector('#header>.utility>nav .infor');
+                        infor.style.display = 'none'
+                        const topic_inside = document.querySelector('#header>.utility>nav .topic-inside');
+                        topic_inside.style.display = 'flex'
+                        const back = document.querySelector('#header .utility nav .back');
+                        back.style.display = 'flex'
+                    }
+                    function back(event){
+                        const infor = document.querySelector('#header>.utility>nav .infor');
+                        infor.style.display = 'block'
+                        const topic_inside = document.querySelector('#header>.utility>nav .topic-inside');
+                        topic_inside.style.display = 'none'
+                        const back = document.querySelector('#header .utility nav .back');
+                        back.style.display = 'none'
+                    }
+                    function down(event){
+                        const menuContent = document.querySelector('#header>.utility>nav .topic-inside>ul>li>ul');
+                        const menuIcon = document.querySelector('#header>.utility>nav .topic-inside .icon-up-down');
+                        const title = document.querySelector('#header>.utility>nav .topic-inside>ul>li>a');
+                        if (menuContent.style.display === 'none' || menuContent.style.display === '') {
+                            menuContent.style.display = 'block';
+                            menuIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/></svg>`; // Mũi tên lên
+                            title.style.fontWeight = '600';
+                        } else {
+                            menuContent.style.display = 'none';
+                            menuIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>`; // Mũi tên xuống
+                            title.style.fontWeight = '300';
+                        }
+                    }
+
+
+                </script>
             </div>
+        
         </div>
-        <div id="content">
+        <div id="content"
         </div>
         <div id="footer">
         </div>
+        <script src="main.js"></script>
     </div>
 </body>
 </html>
