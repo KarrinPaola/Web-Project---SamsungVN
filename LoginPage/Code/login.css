@@ -1,0 +1,207 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header, main, footer{
+    width: 100%;
+    font-family: sans-serif;
+}
+header{
+    height: 80px;
+    background-color: white;
+}
+header>img{
+    padding-left: 100px;
+    padding-top: 30px;
+}
+main{
+    height: 750px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form{
+    position: absolute;
+    width: 500px;
+    padding: 60px;
+    background-color: white;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.login-form h2{
+    margin: 0 0 30px;
+    text-align: center;
+}
+.form-inside{
+    padding: 20px;
+}
+.form-inside .email-box{
+    position: relative;
+}
+.form-inside .email-box input{
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 16px;
+    color: #0381FE;
+    margin-bottom: 30px;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.form-inside .email-box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0px;
+    font-size: 15px;
+    color: transparent;
+    pointer-events: none;
+    transition: 0.2s;
+}
+.form-inside .email-box input:focus{
+    border-bottom: 1px solid #0381FE;
+
+}
+.form-inside .email-box input:focus ~ label,
+.form-inside .email-box input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: #0381FE;
+    font-size: 12px;
+}
+.save-email{
+    padding-left: 5px;
+    cursor: pointer;
+}
+input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+.save-email label{
+    font-weight: bold;
+    color: #636363;
+    font-size: 12px;
+    padding-left: 5px;
+}
+.next-button button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #D4E8FC;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.form-link{
+    padding-top: 10px;
+}
+.form-link a{
+    color: #8C8C8C;
+    font-size: 10px;
+    font-weight: bold;
+}
+.form-link ul>li{
+    padding-top: 8px;
+    list-style-type: none;
+}
+.login-gg-qr{
+    padding-top: 10px;
+}
+.gg-qr {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #F2F2F2;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 5px 5px;
+    margin-top: 15px;
+}
+.gg-qr img {  
+    width: 30px;
+    height: 30px;
+    margin-right: 50px;   
+}
+.aa{
+    text-decoration-line: none;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+.keep-login{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.keep-login img{
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+.keep-login label{
+    font-size: 13px;
+    color: #636363;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.keep-login span{
+    position: absolute;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 10px;
+    padding: 15px;
+    margin-top: 130px;
+    background-color: white;
+    display: none;
+}
+.keep-login:hover span{
+    display: block;
+}
+footer{
+    height: 100px;
+    background-color: #F2F2F2;
+    padding: 0% 10%;
+}
+footer .up{
+    display: flex;
+    justify-content: flex-end;
+}
+footer .up img{
+   opacity: .5;
+}
+footer .down{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+footer .down ul{
+    display: flex;
+}
+footer .down ul>li{
+    list-style-type: none;
+    font-size: 10px;
+    margin-right: 10px;
+}
+footer .down ul>li>a{
+    text-decoration: none;
+    color: black;
+}
+footer .down span{
+    font-size: 10px;
+    opacity: .5;
+}
+.li-bold{
+    font-weight: bold;
+}
