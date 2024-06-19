@@ -160,4 +160,149 @@ prev_limit.onclick = function(){
         limit_pr.style.left = current + 'px'; 
     }
 } 
-updateLimit(); 
+
+let infor_list = document.querySelector('#content .key-feature-tab .infor');
+console.log(infor_list)
+let items_infor = document.querySelectorAll('#content .key-feature-tab .infor .item');
+console.log(items_infor)
+let buttons_infor = document.querySelectorAll('#content .key-feature-tab .control>ul>li>button')
+console.log(buttons_infor)
+
+let active4 = 0; 
+let lengthInfor = items_infor.length; 
+
+function reloadSlider4() {
+    let checkLeft = items_infor[active4].offsetLeft; 
+    console.log(checkLeft);
+    infor_list.style.left = -checkLeft + 'px';
+
+    let lastActiveButton = document.querySelector('#content .key-feature-tab .control>ul>li>.active')
+    if(lastActiveButton){
+        lastActiveButton.classList.remove('active'); 
+    }
+    buttons_infor[active4].classList.add('active'); 
+}
+buttons_infor.forEach((button, key) => {
+    button.addEventListener('click', function(){
+        active4 = key; 
+        reloadSlider4(); 
+    })
+})
+
+let infor_list2 = document.querySelector('#content .key-feature-tab2 .infor');
+console.log(infor_list2); // Ensure correct selection
+let items_infor2 = document.querySelectorAll('#content .key-feature-tab2 .infor .item');
+console.log(items_infor2); // Ensure correct selection
+let buttons_infor2 = document.querySelectorAll('#content .key-feature-tab2 .control>ul>li>button');
+console.log(buttons_infor2); // Ensure correct selection
+
+let active5 = 0; 
+let lengthInfor2 = items_infor2.length; 
+
+function reloadSlider5() {
+    let checkLeft = items_infor2[active5].offsetLeft; 
+    console.log(checkLeft);
+    infor_list2.style.left = -checkLeft + 'px';
+
+    let white_black = document.querySelectorAll('.key-feature-tab2 .white-black');
+    white_black.forEach(function(el) {
+        el.style.color = (active5 == 3 || active5 == 4) ? 'black' : 'white';
+    });
+
+    items_infor2.forEach(function(item, index) {
+        let container = item.querySelector('.infor-inside .cta .container');
+        if (container) {
+            if (active5 == 3 || active5 == 4) {
+                container.style.backgroundColor = 'black';
+                container.style.color = 'white';
+            } else {
+                container.style.backgroundColor = 'white';
+                container.style.color = 'black';
+            }
+        }
+    });
+
+    let lastActiveButton = document.querySelector('#content .key-feature-tab2 .control>ul>li>.active');
+    if (lastActiveButton) {
+        lastActiveButton.classList.remove('active'); 
+        // Remove border-bottom style when button is no longer active
+        lastActiveButton.style.borderBottom = '';
+    }
+    
+    buttons_infor2[active5].classList.add('active'); 
+    // Add border-bottom style for the active button
+    buttons_infor2[active5].style.borderBottom = (active5 == 3 || active5 == 4) ? '2px solid black' : '2px solid white';
+}
+
+buttons_infor2.forEach((button, key) => {
+    button.addEventListener('click', function() {
+        active5 = key; 
+        reloadSlider5(); 
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    let infor_list3 = document.querySelector('#content .key-feature-tab3 .infor');
+    let items_infor3 = document.querySelectorAll('#content .key-feature-tab3 .infor .item');
+    let buttons_infor3 = document.querySelectorAll('#content .key-feature-tab3 .control > ul > li > button');
+
+    let active6 = 0; 
+    let lengthInfor3 = items_infor3.length; 
+
+    function reloadSlider6() {
+        if (items_infor3[active6]) {
+            let checkLeft = items_infor3[active6].offsetLeft; 
+            console.log(checkLeft);
+            infor_list3.style.left = -checkLeft + 'px';
+        }
+
+        let white_black = document.querySelectorAll('.key-feature-tab3 .white-black');
+        white_black.forEach(function(el) {
+            el.style.color = (active6 == 3) ? 'white' : 'black';
+        });
+
+        items_infor3.forEach(function(item, index) {
+            let container = item.querySelector('.infor-inside .cta .container');
+            if (container) {
+                if (active6 == 3) {
+                    container.style.backgroundColor = 'white';
+                    container.style.color = 'black';
+                } else {
+                    container.style.backgroundColor = 'black';
+                    container.style.color = 'white';
+                }
+            }
+            let underline = item.querySelector('.infor-inside .cta .underline');
+            if (underline) {
+                if (active6 == 3) {
+                    underline.style.borderBottom = '2px solid white'
+                    underline.style.color = 'white';
+                } else {
+                    underline.style.borderBottom = '2px solid black'
+                    underline.style.color = 'black';
+                }
+            }
+        });
+
+        let lastActiveButton = document.querySelector('#content .key-feature-tab3 .control > ul > li > .active');
+        if (lastActiveButton) {
+            lastActiveButton.classList.remove('active'); 
+            lastActiveButton.style.borderBottom = '';
+        }
+        
+        if (buttons_infor3[active6]) {
+            buttons_infor3[active6].classList.add('active'); 
+            buttons_infor3[active6].style.borderBottom = (active6 == 3) ? '2px solid white' : '2px solid black';
+        }
+    }
+
+    buttons_infor3.forEach((button, key) => {
+        button.addEventListener('click', function() {
+            active6 = key; 
+            reloadSlider6(); 
+        });
+    });
+
+    // Initial call to set the correct state
+    reloadSlider6();
+});
