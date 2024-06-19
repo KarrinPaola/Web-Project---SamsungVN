@@ -136,3 +136,20 @@ window.addEventListener('load', function() {
         }
     }
 });
+window.addEventListener('load', function() {
+    var items = document.querySelectorAll('.items');
+
+    items.forEach(function(item) {
+        item.addEventListener('mouseenter', function() {
+            var buyNow = item.querySelector('.buy-now');
+            buyNow.style.visibility = 'visible';
+            buyNow.style.opacity = '1';
+        });
+
+        item.addEventListener('mouseleave', function() {
+            var buyNow = item.querySelector('.buy-now');
+            buyNow.style.visibility = 'hidden';
+            buyNow.style.opacity = '0';
+        });
+    });
+});
