@@ -836,8 +836,8 @@ button:hover {
     width: max-content;
     transition: 1s;
     position: relative;
-    overflow: hidden;
-     transition: transform 0.5s ease;
+    /* overflow: hidden; */
+    transition: transform 0.5s ease;
 }
 #content .showcase a{
     text-decoration: none;
@@ -1028,6 +1028,110 @@ button:hover {
     visibility: visible;
 }
 
+#content .key-feature-tab{
+    position: relative;
+    overflow: hidden;
+
+}
+#content .key-feature-tab .control{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+#content .key-feature-tab .control>h2{
+    margin-top: 48px;
+    font-size: 38px;
+    line-height: 1.2;
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+#content .key-feature-tab .control>ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0 -24px;
+    align-items: center;
+}
+#content .key-feature-tab .control>ul>li{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 48px;
+    height: 100%;
+}
+#content .key-feature-tab .control>ul>li>button{
+    cursor: pointer;
+    color: #000;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 4 0;
+    transition-property: color .2s cubic-bezier(0.4,0,0.2,1);
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    border-radius: 0;
+    background-color: transparent;
+    font-weight: bold;
+}
+#content .key-feature-tab .control>ul>li>button{
+    cursor: pointer;
+    color: #000;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 4 0;
+    transition-property: color .2s cubic-bezier(0.4,0,0.2,1);
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    border-radius: 0;
+    background-color: transparent;
+    font-weight: bold;
+}
+#content .key-feature-tab .control>ul>li>.active{
+    border-bottom: 2px solid black;
+}   
+#content .key-feature-tab .img{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: auto;
+    position: relative;
+    z-index: 100;
+}
+#content .key-feature-tab .img .item{
+    width: 1440px;
+    max-width: 100vw;
+    height: 100%;
+    position: relative;
+}
+#content .key-feature-tab .img .item>img{
+    width: 1440px;
+    max-width: 100vw;
+    height: auto;
+}
+#content .key-feature-tab .infor{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: auto;
+    position: relative;
+    z-index: 600;
+}
+
+
+
 @media (max-width: 1440px){
     #header>.menu{
         display: none;
@@ -1100,6 +1204,22 @@ button:hover {
     #content .show-limit-pr .card-cta>span{
         padding: .69444444vw 2.36111111vw .76388889vw 2.36111111vw;
         border-radius: 1.38888889vw;
+    }
+    #content .key-feature-tab .control>h2{
+        margin-top: 3.333333vw;
+        font-size: 2.638888vw;
+        margin-bottom: 1.666666vw;
+    }
+    #content .key-feature-tab .control>ul>li{
+        margin-right: 3.333333vw;
+    }
+    #content .key-feature-tab .control>ul>li>button{
+        font-size: 1.25vw;
+        line-height: 1.666666vw;
+        padding: 0 0.2777777vw;
+    }
+    #content .key-feature-tab .infor{
+        width: 100vw;
     }
 }
 
