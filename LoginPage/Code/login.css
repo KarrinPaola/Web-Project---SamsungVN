@@ -166,6 +166,9 @@ input[type="checkbox"]{
     background-color: white;
     display: none;
 }
+.keep-login input{
+    cursor: pointer;
+}
 .keep-login:hover span{
     display: block;
 }
