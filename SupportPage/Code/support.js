@@ -153,3 +153,17 @@ window.addEventListener('load', function() {
         });
     });
 });
+window.addEventListener('load', (event) => {
+    const toggleButton = document.getElementById('toggleButton');
+    const phoneNumber = document.getElementById('phoneNumber');
+
+    toggleButton.addEventListener('click', function() {
+        if (phoneNumber.style.display === 'none' || phoneNumber.style.display === '') {
+            phoneNumber.style.display = 'block';
+            this.textContent = 'Hiển thị ít hơn';
+        } else {
+            phoneNumber.style.display = 'none';
+            this.textContent = 'Hiển thị số điện thoại';
+        }
+    });
+});

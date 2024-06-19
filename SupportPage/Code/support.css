@@ -70,7 +70,7 @@ header .header-sup{
     opacity: 0.5;
 }
 main{
-    height: 70vh;
+    height: 100vh;
 }
 .img1{
     width: 100%;
@@ -419,8 +419,7 @@ main{
     "item1 item1 item2 item3"
     "item1 item1 item4 item5"
     ;
-    column-gap: 20px;
-    row-gap: 20px;
+    gap: 20px;
 }
 .items{
     position: relative;
@@ -465,7 +464,7 @@ main{
     grid-area: item5;
 }
 .big-title{
-    font-size: 24px;
+    font-size: 30px;
 }
 .buy-now{
     visibility: hidden;
@@ -496,4 +495,64 @@ main{
     color: black;
     font-weight: bold;
     text-align: center;
+}
+.contact{
+    display: grid;
+    margin: auto;
+    width: 95%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; 
+    grid-template-areas: 
+    "ci1 ci2 ci3"
+    "ci4 ci5 ci6"
+    ;
+    gap: 15px;
+}
+.contact-info{
+    height: 225px;
+    border: 1px solid #AAAAAA;
+    border-radius: 20px;
+    background-color: white;
+    padding: 25px;
+}
+.info-more-2{
+    cursor: pointer;
+    display: block;
+    color: white;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 7px 12px;
+    margin-top: 15px;
+    font-size: 13px;
+}
+.info-more-2:hover{
+    background-color: #555555;
+}
+.contact-2{
+    display: grid;
+    margin: auto;
+    width: 95%;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    margin-top: 30px;
+}
+.info-more-2 img{
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    color: white;
+}
+.phone-number {
+    font-size: 14px;
+    display: none;
+}
+.button-container {
+    margin-top: 20px;
+}
+.toggle-button {
+    display: inline-block;
+    padding-bottom: 10px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
 }
