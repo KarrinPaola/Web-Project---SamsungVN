@@ -306,3 +306,91 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial call to set the correct state
     reloadSlider6();
 });
+
+// Show and Hide Sidebar
+function showSidebar(event){
+    event.preventDefault();
+    const sidebar = document.querySelector('#header>.utility>nav');
+    sidebar.style.display = 'flex'; 
+}
+
+function hideSidebar(event){
+    const sidebar = document.querySelector('#header>.utility>nav');
+    sidebar.style.display = 'none'; 
+}
+
+// Choose Topic and Back Functionality
+function chooseTopic(event){
+    event.preventDefault();
+    const infor = document.querySelector('#header>.utility>nav .infor');
+    const topic_inside = document.querySelector('#header>.utility>nav .topic-inside');
+    const back = document.querySelector('#header .utility nav .back');
+
+    infor.style.display = 'none';
+    topic_inside.style.display = 'flex';
+    back.style.display = 'flex';
+}
+
+function back(event){
+    const infor = document.querySelector('#header>.utility>nav .infor');
+    const topic_inside = document.querySelector('#header>.utility>nav .topic-inside');
+    const back = document.querySelector('#header .utility nav .back');
+
+    infor.style.display = 'block';
+    topic_inside.style.display = 'none';
+    back.style.display = 'none';
+}
+
+// Toggle Menu Content
+function down(event){
+    const menuContent = document.querySelector('#header>.utility>nav .topic-inside>ul>li>ul');
+    const menuIcon = document.querySelector('#header>.utility>nav .topic-inside .icon-up-down');
+    const title = document.querySelector('#header>.utility>nav .topic-inside>ul>li>a');
+
+    if (menuContent.style.display === 'none' || menuContent.style.display === '') {
+        menuContent.style.display = 'block';
+        menuIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/></svg>`; // Mũi tên lên
+        title.style.fontWeight = '600';
+    } else {
+        menuContent.style.display = 'none';
+        menuIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>`; // Mũi tên xuống
+        title.style.fontWeight = '300';
+    }
+}
+
+// Overlay Display on Hover
+let hoverElement = document.querySelector('#header .menu .left-menu');
+let hoverElement2 = document.querySelector('#header .menu .right-menu');
+let overlay = document.querySelector('#header .overlay');
+
+hoverElement.addEventListener('mouseover', function(){
+    overlay.style.display = 'block';
+});
+
+hoverElement.addEventListener('mouseout', function(){
+    overlay.style.display = 'none';
+});
+
+hoverElement2.addEventListener('mouseover', function(){
+    overlay.style.display = 'block';
+});
+
+hoverElement2.addEventListener('mouseout', function(){
+    overlay.style.display = 'none';
+});
+
+// Sidebar Toggle and Back Button
+let menu_hide = document.querySelector('#header .utility .open-sidebar');
+let back2 = document.querySelector('#header .utility nav .back');
+
+menu_hide.addEventListener('click', function(){
+    overlay.style.display = 'none';
+});
+
+back2.addEventListener('click', function(){
+    overlay.style.display = 'block';
+});
+
+console.log(menu_hide);
+console.log(back2);
+
